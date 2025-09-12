@@ -6,7 +6,7 @@ const sortQuestions = (questions: { points: number; question: string; answer: st
 const pastQuestions: Question[] = sortQuestions([
     {
         points: 100,
-        question: 'What city has the highest GDP?',
+        question: 'Hello',
         answer: 'New York City',
     },
     {
