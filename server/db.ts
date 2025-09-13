@@ -11,10 +11,10 @@ Question 4: Done
 Question 5: Done 
 Question 6: Done
 Question 7: Done
-Question 8: Question Needed  
+Question 8: Done
 
 Question 9: Done
-Question 10: Question Needed  
+Question 10: Done
 Question 11: Done 
 Question 12: Question Needed 
 */
@@ -80,13 +80,13 @@ const futureQuestions: Question[] = sortQuestions([
         question:
             'What street in NYC is famous for being the finanical capital of the world?',
         answer: 'Wall Street',
-    }
+    },
     {
         points: 200,//10
         question:
             'A very basic, but powerful state of being, it is the driver of people, and it is the feeling of being content + excited',
         answer: 'Happiness',
-    }
+    },
     {
         points: 300,//11
         question:
@@ -94,7 +94,7 @@ const futureQuestions: Question[] = sortQuestions([
         imgSrc:
             "https://laguidalpina.it/cdn/shop/products/ferrata-marmolada-cresta-ovest-Cristiano-Gregnanin-Guida-Alpina-Certificata-Dolomiti-5.jpg?v=1738870778",
         answer: 'University of Pennsylvania',
-    }
+    },
     {
         points: 400,//12
         question:
@@ -108,7 +108,7 @@ const futureQuestions: Question[] = sortQuestions([
 
 const categories = [
     {
-        title: "Aditya\'s Past',
+        title: 'Aditya\'s Past',
         questions: pastQuestions
     },
     {
