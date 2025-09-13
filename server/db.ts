@@ -100,7 +100,7 @@ const futureQuestions: Question[] = sortQuestions([
         question:
             'The capital city of a country that is a close alley of the US, and is known for once ruling most of the world',
         imgSrc:
-            "hhttps://media.istockphoto.com/id/2157424313/photo/panoramic-aerial-view-of-tower-bridge-and-the-city-of-london-at-twilight.jpg?s=612x612&w=0&k=20&c=PgtGeL8UQV0qKSSx91I3ETQMEQ9_gegfNmi3hVi2ZLw=",
+            "https://media.istockphoto.com/id/2157424313/photo/panoramic-aerial-view-of-tower-bridge-and-the-city-of-london-at-twilight.jpg?s=612x612&w=0&k=20&c=PgtGeL8UQV0qKSSx91I3ETQMEQ9_gegfNmi3hVi2ZLw=",
         answer: 'London',
     }
 ]);
