@@ -1,68 +1,102 @@
 import type { PlayerData, Question } from '$lib/index';
 
 const playerData: PlayerData[] = [];
-const TIME_LEFT = 8; // seconds
+const TIME_LEFT = 9; // seconds
+/* status
+Question 1: Image Push 
+Question 2: Done 
+Question 3: Done 
+Question 4: Done
+
+Question 5: Done 
+Question 6: Done
+Question 7: Done
+Question 8: Question Needed  
+
+Question 9: Done
+Question 10: Question Needed  
+Question 11: Done 
+Question 12: Question Needed 
+*/
 const sortQuestions = (questions: { points: number; question: string; answer: string; imgSrc?: string; }[]) => questions.sort((a, b) => a.points - b.points).map(q => ({ ...q, answered: false, buzzers: [] as string[] }));
 const pastQuestions: Question[] = sortQuestions([
     {
-        points: 100,
-        question: 'What is the most populous city in the US?',
+        points: 100,//1
+        question: 'What sport is this',
+        answer: 'Ice Hockey',
+    },
+    {
+        points: 200,//2
+        question:
+            'Which country\'s flag is this?',
+        imgSrc: "https://www.google.com/imgres?q=indian%20flag&imgurl=https%3A%2F%2Fcdn.britannica.com%2F97%2F1597-050-008F30FA%2FFlag-India.jpg&imgrefurl=https%3A%2F%2Fwww.britannica.com%2Ftopic%2Fflag-of-India&docid=NJDIXB5LEgTxgM&tbnid=LDAjM51x9-NkkM&vet=12ahUKEwipu5_CgNaPAxVlFFkFHXX0Fj4QM3oECBoQAA..i&w=1600&h=1067&hcb=2&ved=2ahUKEwipu5_CgNaPAxVlFFkFHXX0Fj4QM3oECBoQAA",
+        answer: 'India',
+    },
+    {
+        points: 300,//3
+        question:
+            'What is the most populous city in the US?',
+            imgSrc: "https://www.google.com/imgres?q=nyc%20image%20sunset&imgurl=https%3A%2F%2Fmedia.istockphoto.com%2Fid%2F521714583%2Fphoto%2Fnew-york-city-midtown-with-empire-state-building-at-sunset.jpg%3Fs%3D612x612%26w%3D0%26k%3D20%26c%3DpaLoZfZnaZSfaBK_DxLls_Ii0hD3r2PBKSlS6M1QxVU%3D&imgrefurl=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fnew-york-city-skyline-sunset&docid=dgcmQd33fwjzuM&tbnid=4Hc3TPSRZkBE6M&vet=12ahUKEwjlyPSnqdaPAxUlM1kFHVI4FMMQM3oECBgQAA..i&w=612&h=408&hcb=2&ved=2ahUKEwjlyPSnqdaPAxUlM1kFHVI4FMMQM3oECBgQAA",
         answer: 'New York City',
     },
     {
-        points: 200,
-        question:
-            'Which country\'s flag is this?',
-        imgSrc: "https://cdn.britannica.com/34/4034-050-91EE1BCF/Flag-Myanmar.jpg",
-        answer: 'Myanmar',
-    },
-    {
-        points: 300,
-        question:
-            'What Ivy League school has the highest Native American enrollment (a whoppping 1%)?',
-        answer: 'Dartmouth',
-    },
-    {
-        points: 400,
-        question: 'Who wrote the Critique of Pure Reason?',
-        answer: 'Immanuel Kant',
+        points: 400,//4
+        question: 'What public space was Designed in 1858 by Frederick Law Olmsted?',
+        answer: 'Central Park',
     }
 ]);
 
 const presentQuestions: Question[] =
     sortQuestions([
-        {
-            points: 200,
+                {
+            points: 100,//5
             question:
-                'What kind of rock is this?',
-            imgSrc: 'https://madera.objects.liquidweb.services/photos/16842-half-dome-closeup-from-glacier-point-steve-montalto-hmi-Rectangle-600x400.jpg',
-            answer: 'Granite',
+                'What is this school called?',
+            imgSrc: 'https://www.google.com/imgres?q=horace%20mann%20school%20nyc&imgurl=https%3A%2F%2Fd13b2ieg84qqce.cloudfront.net%2F8bb75281ba1f5c160a69dd4ada81feb2cb89a105.jpg&imgrefurl=https%3A%2F%2Fwww.niche.com%2Fk12%2Fhorace-mann-school-bronx-ny%2F&docid=-1fz0k_BudX_kM&tbnid=PlIGgLGhcan52M&vet=12ahUKEwjWh7ftgNaPAxVhD1kFHamFL34QM3oECBwQAA..i&w=1800&h=942&hcb=2&ved=2ahUKEwjWh7ftgNaPAxVhD1kFHamFL34QM3oECBwQAA',
+            answer: 'Horacemann School',
         },
         {
-            points: 100,
+            points: 200,//6
             question:
-                'What is this Cafe called?',
-            imgSrc: 'https://lh3.googleusercontent.com/p/AF1QipNsmB0ugJeJxYVrBKpRkNkyiEa6cKLamFZ4r0M=s1360-w1360-h1020',
-            answer: 'Chaotic Good',
+                'What are these people doing',
+            imgSrc: 'https://www.google.com/imgres?q=debate%20images&imgurl=https%3A%2F%2Fpng.pngtree.com%2Fpng-clipart%2F20230130%2Fourmid%2Fpngtree-students-speech-debate-behind-the-podium-with-microphone-png-image_6575827.png&imgrefurl=https%3A%2F%2Fpngtree.com%2Fso%2Fdebate-clipart&docid=WYZpRkBSLBJdgM&tbnid=8tw8ZKyUilLpfM&vet=12ahUKEwiu17SDhNaPAxXCEFkFHZlnM1YQM3oECCIQAA..i&w=360&h=360&hcb=2&ved=2ahUKEwiu17SDhNaPAxXCEFkFHZlnM1YQM3oECCIQAA',
+            answer: 'Debating',
         },
         {
-            points: 300,
-            question: 'What programming language is the below code?',
-            imgSrc: '/programming_language.png',
-            answer: 'Javascript',
+            points: 300,//7
+            question: 'What sport includes the greats of Novak Dojokvic and Rafa Nadal?',
+            answer: 'Tennis',
         },
         {
-            points: 400,
+            points: 400,//8
             question:
-                'Who painted this?',
-            imgSrc:
-                "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjb1tCOwOdOeYcp5iflCvvW95qCqpmNUo-TMIt3ndxzsxzmgmH18iClIIQLPO48ojPg5Rts2AUm9rZBeVPcjnjrjGaLSzCwbipQotY4EhOk3tUoHJjJyZjTqfY5s9MZ5eSkGrrqmom4JXUdHEqE-Ts8E9i-SuFf9xEukJcFBs5NuOhe6ANdODMFYzyV_Q/s16000/Unfinished.jpg",
-            answer: 'Keith Haring',
+                'This country is home contains part of the alps, and is located to the south of Germany.',
+            answer: 'Switzerland',
         }
     ]);
 const futureQuestions: Question[] = sortQuestions([
     {
-        points: 100,
+        points: 100,//9
+        question:
+            'What street in NYC is famous for being the finanical capital of the world?',
+        answer: 'Wall Street',
+    }
+    {
+        points: 200,//10
+        question:
+            'A very basic, but powerful state of being, it is the driver of people, and it is the feeling of being content + excited',
+        answer: 'Happiness',
+    }
+    {
+        points: 300,//11
+        question:
+            'What major university is based in Pennsylvania, with the colors of blue and red',
+        imgSrc:
+            "https://laguidalpina.it/cdn/shop/products/ferrata-marmolada-cresta-ovest-Cristiano-Gregnanin-Guida-Alpina-Certificata-Dolomiti-5.jpg?v=1738870778",
+        answer: 'University of Pennsylvania',
+    }
+    {
+        points: 400,//12
         question:
             'This country is home to the Dolomites, which are a mountain range that has historical \'via ferratas\', iron cables and rungs, to aid traversing the peaks?',
         imgSrc:
@@ -74,15 +108,15 @@ const futureQuestions: Question[] = sortQuestions([
 
 const categories = [
     {
-        title: 'My Past',
+        title: "Aditya\'s Past',
         questions: pastQuestions
     },
     {
-        title: 'My Present',
+        title: 'Aditya\'s Present',
         questions: presentQuestions
     },
     {
-        title: 'My Future',
+        title: 'Aditya\'s Future',
         questions: futureQuestions
     }
 ];
