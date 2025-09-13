@@ -3,8 +3,8 @@ import type { PlayerData, Question } from '$lib/index';
 const playerData: PlayerData[] = [];
 const TIME_LEFT = 9; // seconds
 /* status
-Question 1: Image Push 
-Question 2: Done, npm IMAGE 
+Question 1: Done, SELF IMAGE
+Question 2: Done, IMAGE 
 Question 3: Done, IMAGE 
 Question 4: Done
 
@@ -23,6 +23,7 @@ const pastQuestions: Question[] = sortQuestions([
     {
         points: 100,//1
         question: 'What sport is this',
+        imgSrc: 'Rangers.jpeg',
         answer: 'Ice Hockey',
     },
     {
@@ -91,16 +92,16 @@ const futureQuestions: Question[] = sortQuestions([
     {
         points: 300,//11
         question:
-            'What is the name of the business school of a major university is based in Pennsylvania, with the colors of blue and red (The --- School)',
+            'What is the name of the business school of a major university is based in Pennsylvania, with the colors of blue and red (The --- School), include "The" and "School"',
         answer: 'The Wharton School',
     },
     {
         points: 400,//12
         question:
-            'This country is home to the Dolomites, which are a mountain range that has historical \'via ferratas\', iron cables and rungs, to aid traversing the peaks?',
+            'The capital city of a country that is a close alley of the US, and is known for once ruling most of the world',
         imgSrc:
-            "https://laguidalpina.it/cdn/shop/products/ferrata-marmolada-cresta-ovest-Cristiano-Gregnanin-Guida-Alpina-Certificata-Dolomiti-5.jpg?v=1738870778",
-        answer: 'Italy',
+            "hhttps://media.istockphoto.com/id/2157424313/photo/panoramic-aerial-view-of-tower-bridge-and-the-city-of-london-at-twilight.jpg?s=612x612&w=0&k=20&c=PgtGeL8UQV0qKSSx91I3ETQMEQ9_gegfNmi3hVi2ZLw=",
+        answer: 'London',
     }
 ]);
 
