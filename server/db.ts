@@ -4,18 +4,18 @@ const playerData: PlayerData[] = [];
 const TIME_LEFT = 9; // seconds
 /* status
 Question 1: Image Push 
-Question 2: Done 
-Question 3: Done 
+Question 2: Done, npm IMAGE 
+Question 3: Done, IMAGE 
 Question 4: Done
 
-Question 5: Done 
-Question 6: Done
-Question 7: Done
+Question 5: Done, IMAGE
+Question 6: Done, IMAGE
+Question 7: Done, IMAGE
 Question 8: Done
 
 Question 9: Done
-Question 10: Done
-Question 11: Done 
+Question 10: Done, IMAGE
+Question 11: Done, IMAGE
 Question 12: Question Needed 
 */
 const sortQuestions = (questions: { points: number; question: string; answer: string; imgSrc?: string; }[]) => questions.sort((a, b) => a.points - b.points).map(q => ({ ...q, answered: false, buzzers: [] as string[] }));
@@ -29,14 +29,14 @@ const pastQuestions: Question[] = sortQuestions([
         points: 200,//2
         question:
             'Which country\'s flag is this?',
-        imgSrc: "https://www.google.com/imgres?q=indian%20flag&imgurl=https%3A%2F%2Fcdn.britannica.com%2F97%2F1597-050-008F30FA%2FFlag-India.jpg&imgrefurl=https%3A%2F%2Fwww.britannica.com%2Ftopic%2Fflag-of-India&docid=NJDIXB5LEgTxgM&tbnid=LDAjM51x9-NkkM&vet=12ahUKEwipu5_CgNaPAxVlFFkFHXX0Fj4QM3oECBoQAA..i&w=1600&h=1067&hcb=2&ved=2ahUKEwipu5_CgNaPAxVlFFkFHXX0Fj4QM3oECBoQAA",
+        imgSrc: "https://cdn.britannica.com/97/1597-050-008F30FA/Flag-India.jpg",
         answer: 'India',
     },
     {
         points: 300,//3
         question:
             'What is the most populous city in the US?',
-            imgSrc: "https://www.google.com/imgres?q=nyc%20image%20sunset&imgurl=https%3A%2F%2Fmedia.istockphoto.com%2Fid%2F521714583%2Fphoto%2Fnew-york-city-midtown-with-empire-state-building-at-sunset.jpg%3Fs%3D612x612%26w%3D0%26k%3D20%26c%3DpaLoZfZnaZSfaBK_DxLls_Ii0hD3r2PBKSlS6M1QxVU%3D&imgrefurl=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fnew-york-city-skyline-sunset&docid=dgcmQd33fwjzuM&tbnid=4Hc3TPSRZkBE6M&vet=12ahUKEwjlyPSnqdaPAxUlM1kFHVI4FMMQM3oECBgQAA..i&w=612&h=408&hcb=2&ved=2ahUKEwjlyPSnqdaPAxUlM1kFHVI4FMMQM3oECBgQAA",
+            imgSrc: "https://media.istockphoto.com/id/521714583/photo/new-york-city-midtown-with-empire-state-building-at-sunset.jpg?s=612x612&w=0&k=20&c=paLoZfZnaZSfaBK_DxLls_Ii0hD3r2PBKSlS6M1QxVU=",
         answer: 'New York City',
     },
     {
@@ -52,19 +52,20 @@ const presentQuestions: Question[] =
             points: 100,//5
             question:
                 'What is this school called?',
-            imgSrc: 'https://www.google.com/imgres?q=horace%20mann%20school%20nyc&imgurl=https%3A%2F%2Fd13b2ieg84qqce.cloudfront.net%2F8bb75281ba1f5c160a69dd4ada81feb2cb89a105.jpg&imgrefurl=https%3A%2F%2Fwww.niche.com%2Fk12%2Fhorace-mann-school-bronx-ny%2F&docid=-1fz0k_BudX_kM&tbnid=PlIGgLGhcan52M&vet=12ahUKEwjWh7ftgNaPAxVhD1kFHamFL34QM3oECBwQAA..i&w=1800&h=942&hcb=2&ved=2ahUKEwjWh7ftgNaPAxVhD1kFHamFL34QM3oECBwQAA',
+            imgSrc: 'https://d13b2ieg84qqce.cloudfront.net/8bb75281ba1f5c160a69dd4ada81feb2cb89a105.jpg',
             answer: 'Horacemann School',
         },
         {
             points: 200,//6
             question:
                 'What are these people doing',
-            imgSrc: 'https://www.google.com/imgres?q=debate%20images&imgurl=https%3A%2F%2Fpng.pngtree.com%2Fpng-clipart%2F20230130%2Fourmid%2Fpngtree-students-speech-debate-behind-the-podium-with-microphone-png-image_6575827.png&imgrefurl=https%3A%2F%2Fpngtree.com%2Fso%2Fdebate-clipart&docid=WYZpRkBSLBJdgM&tbnid=8tw8ZKyUilLpfM&vet=12ahUKEwiu17SDhNaPAxXCEFkFHZlnM1YQM3oECCIQAA..i&w=360&h=360&hcb=2&ved=2ahUKEwiu17SDhNaPAxXCEFkFHZlnM1YQM3oECCIQAA',
+            imgSrc: 'https://png.pngtree.com/png-clipart/20230130/ourmid/pngtree-students-speech-debate-behind-the-podium-with-microphone-png-image_6575827.png',
             answer: 'Debating',
         },
         {
             points: 300,//7
             question: 'What sport includes the greats of Novak Dojokvic and Rafa Nadal?',
+            imgSrc: 'https://images.prismic.io/fft-rg-commun-news/fd31483d-e6c3-4563-b517-7972821ebdcc_20220601_RG_NG1_1110_web+Rafael+Nadal+Novak+Djokovic.jpg?auto=compress,format&w=1000&h=800';
             answer: 'Tennis',
         },
         {
