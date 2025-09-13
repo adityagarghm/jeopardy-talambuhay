@@ -65,7 +65,7 @@ const presentQuestions: Question[] =
         {
             points: 300,//7
             question: 'What sport includes the greats of Novak Dojokvic and Rafa Nadal?',
-            imgSrc: 'https://images.prismic.io/fft-rg-commun-news/fd31483d-e6c3-4563-b517-7972821ebdcc_20220601_RG_NG1_1110_web+Rafael+Nadal+Novak+Djokovic.jpg?auto=compress,format&w=1000&h=800';
+            imgSrc: 'https://images.prismic.io/fft-rg-commun-news/fd31483d-e6c3-4563-b517-7972821ebdcc_20220601_RG_NG1_1110_web+Rafael+Nadal+Novak+Djokovic.jpg?auto=compress,format&w=1000&h=800',
             answer: 'Tennis',
         },
         {
