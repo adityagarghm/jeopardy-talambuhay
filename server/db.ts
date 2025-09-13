@@ -53,7 +53,7 @@ const presentQuestions: Question[] =
             question:
                 'What is this school called?',
             imgSrc: 'https://d13b2ieg84qqce.cloudfront.net/8bb75281ba1f5c160a69dd4ada81feb2cb89a105.jpg',
-            answer: 'Horacemann School',
+            answer: 'Horace Mann School',
         },
         {
             points: 200,//6
@@ -91,10 +91,8 @@ const futureQuestions: Question[] = sortQuestions([
     {
         points: 300,//11
         question:
-            'What major university is based in Pennsylvania, with the colors of blue and red',
-        imgSrc:
-            "https://laguidalpina.it/cdn/shop/products/ferrata-marmolada-cresta-ovest-Cristiano-Gregnanin-Guida-Alpina-Certificata-Dolomiti-5.jpg?v=1738870778",
-        answer: 'University of Pennsylvania',
+            'What is the name of the business school of a major university is based in Pennsylvania, with the colors of blue and red (The --- School)',
+        answer: 'The Wharton School',
     },
     {
         points: 400,//12
