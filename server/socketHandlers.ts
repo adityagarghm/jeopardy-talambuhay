@@ -55,7 +55,7 @@ const addSocketHandlers = (io: Server) => {
                 startTimer(io);
             } else if (state.categories.every((category) => category.questions.every((q) => q.answered))) {
                 io.emit('gameOver');
-                console.log("and the gae is over")
+                console.log("and the game is over")
                 io.emit('whoControls', state.playerData[0].socketId); // reset controller to first player
                 state.whoControls = state.playerData[0].socketId;
             }
