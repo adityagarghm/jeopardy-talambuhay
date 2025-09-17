@@ -16,7 +16,7 @@ Question 8: Done
 Question 9: Done
 Question 10: Done, IMAGE
 Question 11: Done, IMAGE
-Question 12: Question Needed 
+Question 12: Done, Image
 */
 const sortQuestions = (questions: { points: number; question: string; answer: string; imgSrc?: string; }[]) => questions.sort((a, b) => a.points - b.points).map(q => ({ ...q, answered: false, buzzers: [] as string[] }));
 const pastQuestions: Question[] = sortQuestions([
@@ -65,7 +65,7 @@ const presentQuestions: Question[] =
         },
         {
             points: 300,//7
-            question: 'What sport includes the greats of Novak Dojokvic and Rafa Nadal?',
+            question: 'What sport includes the greats of Novak Djokovic and Rafa Nadal?',
             imgSrc: 'https://images.prismic.io/fft-rg-commun-news/fd31483d-e6c3-4563-b517-7972821ebdcc_20220601_RG_NG1_1110_web+Rafael+Nadal+Novak+Djokovic.jpg?auto=compress,format&w=1000&h=800',
             answer: 'Tennis',
         },
